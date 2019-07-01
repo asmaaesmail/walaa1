@@ -591,7 +591,7 @@ section.special ul li img {
 }
 
 body {
-     background: radial-gradient(ellipse at bottom,#f2d5aa 0%, #7d6e66 100%);
+     background: radial-gradient(ellipse at bottom,#f2d5aa 0%, #bcaca3 100%);
 }
 
 @-webkit-keyframes backgroundAnimate {
@@ -675,19 +675,19 @@ body {
   opacity: 0.6;
   z-index: -1;
   -webkit-animation-name: backgroundAnimate;
-  -webkit-animation-duration: 250s;
+  -webkit-animation-duration: 280s;
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   -moz-animation-name: backgroundAnimate;
-  -moz-animation-duration: 250s;
+  -moz-animation-duration: 280s;
   -moz-animation-timing-function: linear;
   -moz-animation-iteration-count: infinite;
   -o-animation-name: backgroundAnimate;
-  -o-animation-duration: 250s;
+  -o-animation-duration: 280s;
   -o-animation-timing-function: linear;
   -o-animation-iteration-count: infinite;
   animation-name: backgroundAnimate;
-  animation-duration: 250s;
+  animation-duration: 280s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
@@ -767,6 +767,49 @@ p.num:hover{
     .img-svg{
     width: 70%
 }
+}
+/**************coffe************************/
+
+
+  .sec1-center {
+            text-align: center;
+              color: #fff;
+              font-size: 20px
+      }
+          
+          
+          
+
+
+#container1 { 
+ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+svg .steam { animation: radiate 520s infinite linear,  faded infinite 4s linear; stroke: rgba(255,255,255,.6); }
+#steam-1, #steam-5 {  animation: radiate 480s infinite linear, faded infinite 3s linear; }
+
+#steam-2 {  animation: radiate 400s infinite linear; }
+
+#steam-5 { animation: radiate 350s infinite linear; }
+
+
+@keyframes radiate {
+  0% { stroke-dashoffset: 1px;  }
+  100% { stroke-dashoffset: -10000px; }
+}
+
+@keyframes faded {
+  0% { opacity: 1; }
+  50% { opacity: .5; }
+  100% { opacity: 1; }
+
+}
+svg {
+    width: 124px;
+    height: 172px;
 }
 /*********************************/
 .content100{
