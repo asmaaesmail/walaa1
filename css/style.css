@@ -452,7 +452,7 @@ form.form-login {
     cursor: pointer;
     line-height: 20px;
     display: inline-block;
-    color: #d3d3d3;
+    color: #3d4952;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
