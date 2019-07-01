@@ -733,9 +733,9 @@ span.num{
 p.num {
     color: #3d4b60;
     border-radius: 50%;
-    border: 2px solid #3d4952;
+   /* border: 2px solid #3d4952;
     width: 134px;
-    height: 60px;
+    height: 60px;*/
     margin: auto;
     display: flex;
     align-items: center;
@@ -744,13 +744,23 @@ p.num {
     margin-top: 8px;
     transition: all .4s ease-in-out;
     font-size: 36px;
+    position: absolute;
+    top: 61%;
+    left: 0;
+    right: 23px;
+    margin: auto;
+     animation: scale 4s infinite ease-in-out;
 }
-p.num:hover{
-   background-color: #fff
-}
+
 
 .img-svg{
       animation: swing 4s infinite ease-in-out;
+}
+
+@keyframes scale {
+  0%, 100% { transform: scale(1)}
+  50% {transform:scale(1.2);}
+  
 }
 @keyframes swing {
   0%, 100% { transform: rotate(-20deg); }
@@ -809,8 +819,11 @@ svg .steam { animation: radiate 520s infinite linear,  faded infinite 4s linear;
 
 }
 svg {
-    width: 124px;
-    height: 172px;
+    width: 247px;
+    height: 379px;
+}
+.content-relative{
+    position: relative
 }
 /*********************************/
 .content100{
