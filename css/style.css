@@ -306,9 +306,9 @@ section.special ul li{
    
 }
 .special .content-form {
-    -webkit-box-shadow: 0px 0px 16px 0 rgb(255, 255, 255);
-    -moz-box-shadow: 0px 0px 16px 0 rgb(255, 255, 255);
-    box-shadow: 0px 0px 16px 0 rgb(255, 255, 255);
+    -webkit-box-shadow: 0px 0px 16px 0 rgb(61, 73, 82);
+    -moz-box-shadow: 0px 0px 16px 0 rgb(61, 73, 82);
+    box-shadow:0px 0px 16px 0 rgb(61, 73, 82);
     padding: 20px 0;
     border-radius: 20px;
     position: relative;
@@ -329,7 +329,7 @@ section.special ul li{
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    color: lightgray;
+    color: #3d4952;
     -webkit-transition: 0.2s ease all;
     -moz-transition: 0.2s ease all;
     -ms-transition: 0.2s ease all;
@@ -338,7 +338,7 @@ section.special ul li{
 }
 
 #logo:hover {
-	color:#95663f
+	/*color:#95663f*/
 }
 
 form.form-login {
@@ -388,12 +388,13 @@ form.form-login {
 .submit{
     width: 17%;
     height: 50px;
-    background-color: #fff;
-    color: #986941;
+    background-color: #3d4952;
+    color: #fdfaf7;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    transition: all .4s ease-in-out
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
 }
 
 .submit:hover {
@@ -590,7 +591,7 @@ section.special ul li img {
 }
 
 body {
-  background-color: #000;
+     background: radial-gradient(ellipse at bottom,#f2d5aa 0%, #7d6e66 100%);
 }
 
 @-webkit-keyframes backgroundAnimate {
@@ -719,9 +720,42 @@ body {
     margin-top: 20px;
     font-size: 23px
 }
+.p-bron{
+    color:#96663d;
+    margin-top: 20px;
+    font-size: 23px
+    
+}
 span.num{
     font-size: 20px;
     color: #96663d
+}
+p.num {
+    color: #3d4b60;
+    border-radius: 50%;
+    border: 2px solid #3d4952;
+    width: 95px;
+    height: 42px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin-top: 8px;
+    transition: all .4s ease-in-out
+}
+p.num:hover{
+   background-color: #fff
+}
+
+.img-svg{
+      animation: swing 4s infinite ease-in-out;
+}
+@keyframes swing {
+  0%, 100% { transform: rotate(-20deg); }
+  20% {transform:scale(.95);}
+  50% { transform: rotate(20deg); }
+  80% {transform:scale(.95);}
 }
 
 @media screen and (max-width: 768px) {
