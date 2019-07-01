@@ -734,8 +734,8 @@ p.num {
     color: #3d4b60;
     border-radius: 50%;
     border: 2px solid #3d4952;
-    width: 114px;
-    height: 48px;
+    width: 134px;
+    height: 60px;
     margin: auto;
     display: flex;
     align-items: center;
@@ -743,7 +743,7 @@ p.num {
     font-weight: bold;
     margin-top: 8px;
     transition: all .4s ease-in-out;
-    font-size: 30px;
+    font-size: 36px;
 }
 p.num:hover{
    background-color: #fff
