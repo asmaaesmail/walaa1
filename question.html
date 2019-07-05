@@ -14,14 +14,15 @@
       <link rel="stylesheet" href="css/animate.css">
       <!-- Main Stylesheet File -->
       <link href="css/style.css" rel="stylesheet">
-      <style>
-         /*special for this page*/
-         html , body{
-         height: auto;
-         }
+       <style>
+          /*special for this page*/
+          html , body{
+              height: auto;
+              
+          }
       </style>
    </head>
-   <body style="height: auto">
+   <body >
       <div id="back"></div>
       <div id="front"></div>
       <section class="special all-sections">
@@ -38,14 +39,14 @@
                      <form method="post" action="welcome.html" class="form-login">
                         <div class="form-group form-group1">
                            <label >هذا النص هو مثال لنص يمكن ان يستبدل في هذة المساحة </label>
-                           <div class="flex-group">
+                           <div class="">
                               <p>
-                                 <input type="radio" id="test1" name="radio-group" checked>
-                                 <label for="test1">اجابة 1 </label>
+                               <input type="radio" id="test1" name="radio-group" checked>
+                               <label for="test1" class="label-inlie"></label><label for="test1" class="curs-pointer">اجابة 1</label>
                               </p>
-                              <p class="marg-right">
+                              <p class="">
                                  <input type="radio" id="test2" name="radio-group">
-                                 <label for="test2">اجابة 2</label>
+                                 <label for="test2" class="label-inlie"></label><label for="test2" class="curs-pointer">اجابة 2</label> 
                               </p>
                            </div>
                         </div>
@@ -55,9 +56,12 @@
                         </div>
                         <div class="form-group form-group1">
                            <div class="rate-us ">
-                              <label class="label-emoje" >هذا النص هو مثال لنص يمكن ان يستبدل في هذة المساحة</label>
-                              <input type="radio" name="question" value="Happy" class="green" id="question3b"><label for="question3b" class="green-label"></label>
-                              <input type="radio" name="question" value="Unhappy" class="red" id="question1b"><label for="question1b" class="red-label"></label>
+                              
+                             <label class="label-emoje" >هذا النص هو مثال لنص يمكن ان يستبدل في هذة المساحة</label>
+                              <div class="flex-imoje">
+                                  <input type="radio" name="question" value="Happy" class="green" id="question3b"><label for="question3b" class="green-label"></label>
+                                  <input type="radio" name="question" value="Unhappy" class="red" id="question1b"><label for="question1b" class="red-label"></label>
+                              </div>
                            </div>
                         </div>
                         <div class="form-group align-center">
