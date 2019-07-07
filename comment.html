@@ -57,9 +57,9 @@
                      <h2 class="h2-after login" >اترك تعليقا </h2>
                      <p class="p-comment">نحن نهتم بارائكم ...شاركونا النجاح</p>
                      <form method="post" action="" class="form-login">
-                        <div class="form-group">
+                        <div class="form-group form">
                            <label for="usr">الاسم: </label>
-                           <input type="text" class="form-control" id="usr">
+                           <input type="text" class="form-control" id="usr" required>
                         </div>
                          <div class="form-group">
                            <label for="usr">اكتب وسيلة التواصل: </label>
@@ -67,7 +67,7 @@
                         </div>
                         <div class="form-group">
                            <label for="pwd">التعليق: </label>
-                           <textarea class="form-control"></textarea>
+                           <textarea class="form-control" required></textarea>
                            
                         </div>
                        
@@ -80,6 +80,18 @@
             </div>
          </div>
       </section>
+      
+        <!-- loader -->
+      
+    <div class="loader">
+      <div class="site">
+      <div class="ani">
+        <div class="ani_dot"></div>
+        <div class="ani_dot"></div>
+        <div class="ani_dot"></div>
+      </div>
+    </div>
+   </div> 
       <!-- jquery -->
       <script src="js/jquery-1.11.1.min.js"></script>
       <script src="js/popper.min.js"></script>
