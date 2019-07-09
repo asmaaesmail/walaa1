@@ -988,8 +988,8 @@ label.red-label::before {
 
 
 
-
-
+/*************************************/
+/********loader************/
 /*************************************/
  .loader {
     top: 0;
@@ -1003,73 +1003,452 @@ label.red-label::before {
     align-items: center;
     justify-content: center;
 }
-          
-          .site {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
-
-.ani {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-  animation: ani 4s infinite ease-in;
-}
-@keyframes ani {
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.ani_dot {
+.container1 {
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#teacup {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 115px;
+  width: 175px;
+  background-color: #96663d;
+  border-radius: 0 0 4rem 4rem;
+}
+#teacup #face {
+  position: relative;
+  top: 55px;
+  animation: facemove 5s infinite;
+}
+#teacup #handle {
+  position: absolute;
+  top: -30px;
+  left: -615px;
+  z-index: -1;
+}
+#teacup #mouth {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: 32px;
+  height: 8px;
+  width: 25px;
+  background-color: #8a572b;
+  border-radius: 2rem;
+  animation: mouthmove 5s infinite ease-in-out;
+}
+#teacup #handle-pos {
+  position: absolute;
+  margin: 2.8em 580px;
+  height: 85px;
+  width: 65px;
+  border-radius: 100px 120px 0 200px;
+  background-color: #96663d;
+  -webkit-transform: rotate(-48deg);
+}
+#teacup #handle-neg {
+  position: absolute;
+  margin: 3.5em 590px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px 200px 0 200px;
+  background-color: lightblue;
+  -webkit-transform: rotate(-30deg);
+  z-index: 1;
+}
+#teacup #eyeleft {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: -30px;
+  left: -75px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+#teacup #eyeleft #upperlid {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #8a572b;
+  z-index: 1;
+  animation: upperliddown 5s infinite;
+}
+#teacup #eyeleft #lowerlid {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #8a572b;
+  z-index: 1;
+  animation: lowerliddown 5s infinite;
+}
+#teacup #eyeleft #pupil {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  animation: pupilmove 5s infinite;
+}
+#teacup #eyeleft #pupil::after {
+  position: absolute;
+  left: 20px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: white;
   border-radius: 50%;
 }
-
-.ani_dot:nth-child(1) {
-  background-color: rgba(255, 0, 0, 0.5);
-  animation: dot1 2s infinite alternate ease-in;
-  /*transform: translateY(-300%);*/
+#teacup #eyeright {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  top: -30px;
+  left: 75px;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
 }
-@keyframes dot1 {
+#teacup #eyeright #upperlid {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #8a572b;
+  z-index: 1;
+  animation: upperliddown 5s infinite;
+}
+#teacup #eyeright #lowerlid {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: #8a572b;
+  z-index: 1;
+  animation: lowerliddown 5s infinite;
+}
+#teacup #eyeright #pupil {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 50%;
+  animation: pupilmove 5s infinite;
+}
+#teacup #eyeright #pupil::after {
+  position: absolute;
+  left: 20px;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+#plate {
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 25px;
+  width: 200px;
+  background-color: #8a572b;
+  border-radius: 0 0 3em 3em;
+  top: 100px;
+}
+
+
+@keyframes coffeepoor {
   0% {
+    height: 600px;
+    top: -200%;
+  }
+  65% {
+    height: 300px;
+    top: -200%;
+  }
+  80% {
+    height: 150px;
+    top: 50%;
+  }
+  85% {
+    height: 0px;
+    top: 50%;
   }
   100% {
-    transform: translateY(-300%) scale(2);
+    height: 0px;
+    top: 50%;
   }
 }
-
-.ani_dot:nth-child(2) {
-  background-color: rgba(0, 255, 0, 0.5);
-  animation: dot2 2s infinite alternate ease-in;
-}
-@keyframes dot2 {
+@keyframes upperliddown {
   0% {
+    top: -50px;
+  }
+  20% {
+    top: -50px;
+  }
+  30% {
+    top: -25px;
+  }
+  40% {
+    top: -25px;
+  }
+  55% {
+    top: -50px;
+  }
+  70% {
+    top: -25px;
+  }
+  75% {
+    top: -25px;
+  }
+  80% {
+    top: -50px;
+  }
+  81% {
+    top: -50px;
+  }
+  82% {
+    top: -25px;
+  }
+  83% {
+    top: -50px;
+  }
+  85% {
+    top: -50px;
+  }
+  86% {
+    top: -25px;
+  }
+  87% {
+    top: -50px;
+  }
+  88% {
+    top: -50px;
+  }
+  89% {
+    top: -25px;
+  }
+  90% {
+    top: -50px;
+  }
+  91% {
+    top: -50px;
+  }
+  92% {
+    top: -25px;
+  }
+  93% {
+    top: -50px;
   }
   100% {
-    transform: translateX(calc(0.85 * 300%)) translateY(calc(0.5 * 300%))
-      scale(2);
+    top: -50px;
   }
 }
-
-.ani_dot:nth-child(3) {
-  background-color: rgba(0, 0, 255, 0.5);
-  animation: dot3 2s infinite alternate ease-in;
-}
-@keyframes dot3 {
+@keyframes lowerliddown {
   0% {
+    top: 50px;
+  }
+  20% {
+    top: 50px;
+  }
+  30% {
+    top: 25px;
+  }
+  40% {
+    top: 25px;
+  }
+  55% {
+    top: 50px;
+  }
+  70% {
+    top: 25px;
+  }
+  75% {
+    top: 25px;
+  }
+  80% {
+    top: 50px;
+  }
+  81% {
+    top: 50px;
+  }
+  82% {
+    top: 25px;
+  }
+  83% {
+    top: 50px;
+  }
+  85% {
+    top: 50px;
+  }
+  86% {
+    top: 25px;
+  }
+  87% {
+    top: 50px;
+  }
+  88% {
+    top: 50px;
+  }
+  89% {
+    top: 25px;
+  }
+  90% {
+    top: 50px;
+  }
+  91% {
+    top: 50px;
+  }
+  92% {
+    top: 25px;
+  }
+  93% {
+    top: 50px;
   }
   100% {
-    transform: translateX(calc(0.85 * -300%)) translateY(calc(0.5 * 300%))
-      scale(2);
+    top: 50px;
+  }
+}
+@keyframes facemove {
+  0% {
+    transform: translateY(0px);
+  }
+  5% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translate(-4px, 0);
+  }
+  15% {
+    transform: translate(4px, 0);
+  }
+  20% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translateY(6px);
+  }
+  40% {
+    transform: translateY(6px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  58% {
+    transform: translateY(2px);
+  }
+  65% {
+    transform: translateY(8px);
+  }
+  74% {
+    transform: translateY(8px);
+  }
+  76% {
+    transform: translate(-3px, -2px);
+  }
+  80% {
+    transform: translate(2px, -4px);
+  }
+  84% {
+    transform: translate(6px, 3px);
+  }
+  88% {
+    transform: translate(-2px, 5px);
+  }
+  92% {
+    transform: translate(0px, -3px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes pupilmove {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  5% {
+    transform: translate(0px, 0px);
+  }
+  10% {
+    transform: translate(-4px, 0px);
+  }
+  15% {
+    transform: translate(4px, 0px);
+  }
+  20% {
+    transform: translate(0px, 0px);
+  }
+  254 {
+    transform: translate(0px, 4px);
+  }
+  30% {
+    transform: translate(0px, 4px);
+  }
+  40% {
+    transform: translate(0px, 0px);
+  }
+  76% {
+    transform: translate(0px, 0px);
+  }
+  80% {
+    transform: scale(1.1) translate(-6px, 0);
+  }
+  85% {
+    transform: scale(1.1) translate(0px, -6px);
+  }
+  90% {
+    transform: scale(1.1) translate(3px, -3px);
+  }
+  95% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+@keyframes mouthmove {
+  0% {
+    transform: translateY(0px);
+  }
+  73% {
+    transform: translateY(0px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  95% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
