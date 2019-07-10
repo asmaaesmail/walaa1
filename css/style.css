@@ -991,464 +991,144 @@ label.red-label::before {
 /*************************************/
 /********loader************/
 /*************************************/
- .loader {
-    top: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100%;
-    background-color: #e5d8c4;
-    position: fixed;
-    z-index: 9999999999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.container1 {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#teacup {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 115px;
-  width: 175px;
-  background-color: #96663d;
-  border-radius: 0 0 4rem 4rem;
-}
-#teacup #face {
+  
+.row1 {
   position: relative;
-  top: 55px;
-  animation: facemove 5s infinite;
+  margin: 0 auto;
 }
-#teacup #handle {
+
+:before,
+:after {
   position: absolute;
-  top: -30px;
-  left: -615px;
-  z-index: -1;
+  content: '';
 }
-#teacup #mouth {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  top: 32px;
-  height: 8px;
-  width: 25px;
-  background-color: #8a572b;
-  border-radius: 2rem;
-  animation: mouthmove 5s infinite ease-in-out;
-}
-#teacup #handle-pos {
-  position: absolute;
-  margin: 2.8em 580px;
-  height: 85px;
-  width: 65px;
-  border-radius: 100px 120px 0 200px;
-  background-color: #96663d;
-  -webkit-transform: rotate(-48deg);
-}
-#teacup #handle-neg {
-  position: absolute;
-  margin: 3.5em 590px;
-  height: 60px;
-  width: 60px;
-  border-radius: 100px 200px 0 200px;
-  background-color: lightblue;
-  -webkit-transform: rotate(-30deg);
-  z-index: 1;
-}
-#teacup #eyeleft {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  top: -30px;
-  left: -75px;
+
+.beans {
+  margin: 20px auto;
+  width: 35px;
   height: 50px;
-  width: 50px;
-  background-color: white;
+  background: #8B4C39;
   border-radius: 50%;
-  overflow: hidden;
+  animation: drop2 1s ease-in infinite;
 }
-#teacup #eyeleft #upperlid {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background-color: #8a572b;
-  z-index: 1;
-  animation: upperliddown 5s infinite;
-}
-#teacup #eyeleft #lowerlid {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background-color: #8a572b;
-  z-index: 1;
-  animation: lowerliddown 5s infinite;
-}
-#teacup #eyeleft #pupil {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 40px;
-  width: 40px;
-  background-color: black;
+
+.beans:before {
+  left: 18px;
+  width: 3px;
   border-radius: 50%;
-  animation: pupilmove 5s infinite;
-}
-#teacup #eyeleft #pupil::after {
-  position: absolute;
-  left: 20px;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-color: white;
-  border-radius: 50%;
-}
-#teacup #eyeright {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  top: -30px;
-  left: 75px;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 50%;
-  overflow: hidden;
-}
-#teacup #eyeright #upperlid {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background-color: #8a572b;
-  z-index: 1;
-  animation: upperliddown 5s infinite;
-}
-#teacup #eyeright #lowerlid {
-  position: absolute;
-  height: 50px;
-  width: 50px;
-  background-color: #8a572b;
-  z-index: 1;
-  animation: lowerliddown 5s infinite;
-}
-#teacup #eyeright #pupil {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 40px;
-  width: 40px;
-  background-color: black;
-  border-radius: 50%;
-  animation: pupilmove 5s infinite;
-}
-#teacup #eyeright #pupil::after {
-  position: absolute;
-  left: 20px;
-  content: "";
-  height: 20px;
-  width: 20px;
-  background-color: white;
-  border-radius: 50%;
-}
-#plate {
-  margin: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-  height: 25px;
-  width: 200px;
-  background-color: #8a572b;
-  border-radius: 0 0 3em 3em;
-  top: 100px;
+  height: 98%;
+  background: #5E2605;
+  transform: rotate(-5deg);
 }
 
 
-@keyframes coffeepoor {
+
+@keyframes fill {
   0% {
-    height: 600px;
-    top: -200%;
-  }
-  65% {
-    height: 300px;
-    top: -200%;
-  }
-  80% {
-    height: 150px;
-    top: 50%;
-  }
-  85% {
-    height: 0px;
-    top: 50%;
-  }
-  100% {
-    height: 0px;
-    top: 50%;
-  }
-}
-@keyframes upperliddown {
-  0% {
-    top: -50px;
-  }
-  20% {
-    top: -50px;
-  }
-  30% {
-    top: -25px;
-  }
-  40% {
-    top: -25px;
-  }
-  55% {
-    top: -50px;
-  }
-  70% {
-    top: -25px;
-  }
-  75% {
-    top: -25px;
-  }
-  80% {
-    top: -50px;
-  }
-  81% {
-    top: -50px;
-  }
-  82% {
-    top: -25px;
-  }
-  83% {
-    top: -50px;
-  }
-  85% {
-    top: -50px;
-  }
-  86% {
-    top: -25px;
-  }
-  87% {
-    top: -50px;
-  }
-  88% {
-    top: -50px;
-  }
-  89% {
-    top: -25px;
-  }
-  90% {
-    top: -50px;
-  }
-  91% {
-    top: -50px;
-  }
-  92% {
-    top: -25px;
-  }
-  93% {
-    top: -50px;
-  }
-  100% {
-    top: -50px;
-  }
-}
-@keyframes lowerliddown {
-  0% {
-    top: 50px;
-  }
-  20% {
-    top: 50px;
-  }
-  30% {
-    top: 25px;
-  }
-  40% {
-    top: 25px;
-  }
-  55% {
-    top: 50px;
-  }
-  70% {
-    top: 25px;
-  }
-  75% {
-    top: 25px;
-  }
-  80% {
-    top: 50px;
-  }
-  81% {
-    top: 50px;
-  }
-  82% {
-    top: 25px;
-  }
-  83% {
-    top: 50px;
-  }
-  85% {
-    top: 50px;
-  }
-  86% {
-    top: 25px;
-  }
-  87% {
-    top: 50px;
-  }
-  88% {
-    top: 50px;
-  }
-  89% {
-    top: 25px;
-  }
-  90% {
-    top: 50px;
-  }
-  91% {
-    top: 50px;
-  }
-  92% {
-    top: 25px;
-  }
-  93% {
-    top: 50px;
-  }
-  100% {
-    top: 50px;
-  }
-}
-@keyframes facemove {
-  0% {
-    transform: translateY(0px);
-  }
-  5% {
-    transform: translateY(0px);
-  }
-  10% {
-    transform: translate(-4px, 0);
-  }
-  15% {
-    transform: translate(4px, 0);
-  }
-  20% {
-    transform: translate(0px, 0px);
-  }
-  25% {
-    transform: translateY(6px);
-  }
-  40% {
-    transform: translateY(6px);
+    border-bottom: 0px solid #8B4C39;
   }
   50% {
-    transform: translateY(2px);
+    border-bottom: 80px solid #8B4C39;
   }
-  58% {
-    transform: translateY(2px);
-  }
-  65% {
-    transform: translateY(8px);
-  }
-  74% {
-    transform: translateY(8px);
-  }
-  76% {
-    transform: translate(-3px, -2px);
-  }
-  80% {
-    transform: translate(2px, -4px);
-  }
-  84% {
-    transform: translate(6px, 3px);
-  }
-  88% {
-    transform: translate(-2px, 5px);
-  }
-  92% {
-    transform: translate(0px, -3px);
-  }
-  100% {
-    transform: translate(0px, 0px);
-  }
-}
-@keyframes pupilmove {
-  0% {
-    transform: translate(0px, 0px);
-  }
-  5% {
-    transform: translate(0px, 0px);
-  }
-  10% {
-    transform: translate(-4px, 0px);
-  }
-  15% {
-    transform: translate(4px, 0px);
-  }
-  20% {
-    transform: translate(0px, 0px);
-  }
-  254 {
-    transform: translate(0px, 4px);
-  }
-  30% {
-    transform: translate(0px, 4px);
-  }
-  40% {
-    transform: translate(0px, 0px);
-  }
-  76% {
-    transform: translate(0px, 0px);
-  }
-  80% {
-    transform: scale(1.1) translate(-6px, 0);
-  }
-  85% {
-    transform: scale(1.1) translate(0px, -6px);
+  60% {
+    border-bottom: 80px solid #8B4C39;
   }
   90% {
-    transform: scale(1.1) translate(3px, -3px);
-  }
-  95% {
-    transform: translate(0px, 0px);
+    border-bottom: 0px solid #8B4C39;
   }
   100% {
-    transform: translate(0px, 0px);
+    border-bottom: 0px solid #8B4C39;
   }
 }
-@keyframes mouthmove {
+
+@keyframes rotate {
   0% {
-    transform: translateY(0px);
+    transform: rotate(0deg);
   }
-  73% {
-    transform: translateY(0px);
+  50% {
+    transform: rotate(0deg);
   }
-  75% {
-    transform: translateY(10px);
+  65% {
+    transform: translate(0px, 120px) rotate(180deg);
   }
-  95% {
-    transform: translateY(10px);
+  90% {
+    transform: translate(0px, 120px) rotate(180deg);
   }
   100% {
-    transform: translateY(0px);
+    transform: translate(0px, 0px) rotate(0deg);
   }
+}
+
+.v60 {
+  z-index: 99;
+  width: 250px;
+  height: 170px;
+  border-top: 140px solid white;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-radius: 5px;
+}
+
+.v60:before {
+  top: -135px;
+  right: -90px;
+  width: 80px;
+  height: 115px;
+  border: 15px solid white;
+  border-radius: 50%;
+  transform: rotate(45deg);
+}
+
+.v60:after {
+  position: absolute;
+  z-index: 99;
+  content: '';
+  width: 220px;
+  height: 15px;
+  background: white;
+  left: -45px;
+  border-radius: 60px;
+}
+
+.drip {
+  margin: 0 auto 10px;
+  width: 20px;
+  height: 20px;
+  background: #8B4C39;
+  border-radius: 0 50% 50% 50%;
+  animation: drop 1s ease-in infinite;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(0px, -70px) rotate(45deg);
+  }
+  100% {
+    transform: translate(0px, 130px) rotate(45deg);
+  }
+}
+
+@keyframes drop2 {
+  0% {
+    transform: translate(0px, -70px);
+  }
+  100% {
+    transform: translate(0px, 130px);
+  }
+}
+.cup {
+  margin: 40px auto;
+  width: 190px;
+  height: 150px;
+  background: #3d4952;
+  border-radius: 5px 5px 80px 80px;
+}
+
+.cup:after {
+  top: 10px;
+  right: -45px;
+  width: 60px;
+  height: 80px;
+  border: 15px solid #3d4952;
+  border-radius: 70px;
 }
