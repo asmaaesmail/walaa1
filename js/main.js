@@ -1,3 +1,3 @@
   window.onload = function () {
-		$(".loader").fadeOut(900);
+		$(".loader").fadeOut(1500);
 	};
