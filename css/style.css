@@ -933,7 +933,9 @@ svg {
 	width: 50px;
 	display: inline-block;
 	padding: 0 0 0 0px;
-	border-radius: 50%
+	border-radius: 50%;
+    top: 5px;
+    right: 40px;
 }
 
 .red:checked+.red-label {
